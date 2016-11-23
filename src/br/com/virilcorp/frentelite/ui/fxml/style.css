@@ -1,0 +1,405 @@
+
+.btn-purple {
+  color: #fff;
+  background-color: #9400D3;
+  border-color: #9400D3;
+}
+
+.btn-purple:hover {
+  color: #fff;
+  background-color: #BA55D3;
+  border-color: #BA55D3;
+}
+
+.menuPanel{
+    -fx-background-color: #20B2AA ;
+}
+
+.menuButton{
+    -fx-background-color: #FFFFFF ;
+    -fx-font-color: #000000;
+}
+
+.vendaDisabled{
+    -fx-font-size: 20.0px;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+}
+
+.inputText{
+    -fx-font-size: 20.0px;
+    -fx-text-fill: #000000;
+    -fx-height: 50.0px;
+    -fx-font-weight: bold;
+    -fx-border-width: 1.0px;
+    -fx-border-color: #CCCCCC;
+    -fx-border-radius: 4.0px;
+}
+
+.inputTextSmaller{
+    -fx-font-size: 16.0px;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-border-width: 1.0px;
+    -fx-border-color: #666666;
+    -fx-border-radius: 4.0px;
+}
+
+.formLabel{
+	-fx-text-fill: #424242;
+	-fx-effect: dropshadow( one-pass-box , #CCCCCC , 0.0, 0.0 , 2.0 , 2.0);
+	-fx-font-size: 16.0px;
+	-fx-font-weight:bold; 
+}
+
+.imagePanel{
+	-fx-padding: 10.0;
+	-fx-effect: dropshadow( one-pass-box , #CCCCCC , 0.0, 0.0 , 4.0 , 2.0);
+	-fx-background-color: #FFFFFF;
+	-fx-background-radius: 20.0 20.0 20.0 20.0;
+}
+
+.bigFormLabel{
+    -fx-font-size: 25.0px;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+.loginContainer{
+    -fx-background-image: url("wall2.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 480.0 390.0;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0); 
+}
+
+.vendaContainers{
+    -fx-background-image: url("wall2.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: cover, auto;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0); 
+}
+
+.produtoContainer{
+	-fx-background-image: url("wall2.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size: 680.0 565.0;
+    -fx-background-position: center center;
+    -fx-effect: dropshadow(three-pass-box, black, 30.0, 0.5, 0.0, 0.0); 
+}
+
+.produtoVendaPanel{
+    -fx-background-color: #23238E;
+    -fx-text-alignment: center;
+}
+
+.produtoVendaLabel{
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 40.0px;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+}
+
+.table-view {
+    -fx-base: white;
+    -fx-control-inner-background: white;
+    -fx-background-color: #E6E6E6;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 2.0;
+    -fx-border-radius: 5.0px;
+}
+
+
+.table-view .column-header-background {
+    -fx-background-insets: 0.0,1.0,2.0,3.0;
+    -fx-background-radius: 3.0,2.0,2.0,2.0;
+    -fx-text-fill: #000000;
+    -fx-font-size: 12.0px;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-border-width: 0.0 0.0 0.0 0.0;
+    -fx-background-color: transparent;
+    -fx-border-color: 
+        transparent
+        transparent
+        derive(-fx-base, 80.0%) 
+        transparent;
+    -fx-border-insets: 0.0 10.0 1.0 0.0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 12.0px;
+    -fx-font-family: "Segoe UI bold";
+    -fx-text-fill: #000000;
+    -fx-alignment: center-left;
+}
+
+
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+}
+
+.table-cell {     
+    -fx-cell-size: 4.0em;
+    -fx-padding: 1.0em 0.0em 0.1em 0.1em;
+    -fx-font: 12.0px "Segoe UI";    
+    -fx-alignment: bottom-left;
+}
+
+.table-row-cell:empty {
+    -fx-background-color: #FFFFFF;
+    -fx-base: transparent;
+    -fx-control-inner-background: transparent;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 0.0;
+}
+
+.table-row-cell:empty .table-cell {
+    -fx-border-width: 0.0px;
+}
+
+.textFieldBlue{
+    -fx-background-color: #23238E;
+    -fx-background-insets: 0.0,1.0,2.0,3.0;
+    -fx-background-radius: 3.0,2.0,2.0,2.0;
+    -fx-text-fill: #ffffff;
+    -fx-background-radius: 10.0;
+    -fx-font-size:25.0px;
+}
+
+.progress-bar > .bar {
+    -fx-background-color: linear-gradient(
+        from 0.0px 0.75em to 0.75em 0.0px,
+        repeat,
+        -fx-accent 0.0%,
+        -fx-accent 49.0%,
+        derive(-fx-accent, 30.0%) 50.0%,
+        derive(-fx-accent, 30.0%) 99.0%
+        );
+}
+
+.titlePanel{
+    -fx-background-color: #23238E;
+}
+
+.titlePanelText{
+    -fx-font: 30.0px "Georgia";
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+.blackSeparator{
+    -fx-background-color: #000000;
+}
+
+.headerPanel{
+    -fx-background-color: #23238E;
+    -fx-background-insets: 0.0,1.0,2.0,3.0;
+    -fx-background-radius: 3.0,2.0,2.0,2.0;
+    -fx-padding: 12.0 30.0 12.0 30.0;
+    -fx-text-fill: white;
+    -fx-font-size: 12.0px;
+    -fx-box-shadow: 2.0px 2.0px 2.0px #CCCCCC;
+    -fx-border-width: 1.0px;
+    -fx-background-radius: 10.0;
+}
+
+.menuButton{
+    -fx-background-color: 
+        #000000,
+        linear-gradient(#7ebcea, #2f4b8f),
+        linear-gradient(#426ab7, #263e75),
+        linear-gradient(#395cab, #223768);
+    -fx-background-insets: 0.0,1.0,2.0,3.0;
+    -fx-background-radius: 3.0,2.0,2.0,2.0;
+    -fx-padding: 12.0 30.0 12.0 30.0;
+    -fx-text-fill: white;
+    -fx-font-size: 12.0px;
+}
+
+.formButton {
+    -fx-background-color: #6495ED;
+    -fx-background-insets: 0.0,1.0,2.0,3.0;
+    -fx-background-radius: 3.0,2.0,2.0,2.0;
+    -fx-padding: 12.0 30.0 12.0 30.0;
+    -fx-text-fill: white;
+    -fx-font-size: 12.0px;
+    -fx-font-weight: bold;
+}
+
+.formButtonGreen {
+    -fx-background-color: #5FB404;
+    -fx-background-insets: 0.0,1.0,2.0,3.0;
+    -fx-background-radius: 3.0,2.0,2.0,2.0;
+    -fx-padding: 12.0 30.0 12.0 30.0;
+    -fx-text-fill: white;
+    -fx-font-size: 12.0px;
+    -fx-font-weight: bold;
+}
+
+.formButtonGreen:hover {
+    -fx-background-color: #9AFE2E;
+    -fx-text-fill: #000000;
+}
+
+.menuButton Text {
+    -fx-effect: dropshadow( one-pass-box , rgba(0.0,0.0,0.0,0.9) , 1.0, 0.0 , 0.0 , 1.0 );
+}
+
+.commandLabel{
+    -fx-font-weight:bold;
+    -fx-font-size:14.0px;
+    -fx-text-fill: #58ACFA;
+}
+
+.commandLabel:hover{
+    -fx-effect: dropshadow( one-pass-box , #23238E , 1.0, 1.0 , 1.0, 1.0);
+}
+
+.separator *.line { 
+	-fx-border-style: solid;
+	-fx-border-width: 1.0px;
+}
+
+.imageView{
+	-fx-box-shadow: 2.0px 2.0px 2.0px #CCCCCC;
+	-fx-background-radius: 10.0;
+}
+
+.menu-bar{
+	-fx-background-color: #FFFFFF;
+	-fx-border-style: solid;
+	-fx-border-width: 1.0px;
+}
+
+.menu .label {
+    -fx-text-fill: #000000;
+    -fx-padding: 10 12 10 12;
+}
+
+.menu-item .label {
+    -fx-text-fill: #000000;
+    -fx-padding:  10 12 10 12;
+}
+
+.menu-item:focused {
+     -fx-background-color: #ffffff;
+}
+
+.menu-item:focused .label {
+    -fx-text-fill: #000000;
+}
+
+.homeBackground{
+	-fx-background-color: linear-gradient(#191970 0.0%, #4169E1 25.0%, #BFEFFF 75.0%, #FFFFFF 100.0%);
+}
+
+.homeHeaderBackground{
+	-fx-background-color: #FFFFFF;
+}
+
+.homeToolLine{
+	-fx-background-color: #FFFFFF;
+}
+
+.cancelButton{
+	-fx-background-image: url("../images/cancel_icon.png");
+}
+
+.payButton{
+	-fx-background-image: url("../images/pay_icon.png");
+}
+
+.searchProductButton{
+	-fx-background-image: url("../images/search_icon.png");
+}
+
+.okButton{
+	-fx-background-image: url("../images/ok_icon.png");
+}
+
+.saveButton{
+	-fx-background-image: url("../images/save_icon.png");
+}
+
+.deleteButton{
+	-fx-background-image: url("../images/delete_icon.png");
+}
+
+.menuVendaButton{
+	-fx-background-image: url("../images/carrinho.png");
+}
+
+.menuProdutoButton{
+	-fx-background-image: url("../images/produtos_icon.png");
+}
+
+.menuUsuarioButton{
+	-fx-background-image: url("../images/usuario_icon.png");
+}
+
+.menuRelatorioButton{
+	-fx-background-image: url("../images/relatorio_icon.png");
+}
+
+.menuSairButton{
+	-fx-background-image: url("../images/sair_icon.png");
+}
+
+.homeMenuButton{
+	-fx-background-repeat: stretch;   
+    -fx-background-size: 70.0 70.0;
+    -fx-background-position: center center;
+    -fx-font-weight: bold;
+    -fx-background-color: #E6E6E6;
+    -fx-effect: dropshadow( one-pass-box , #CCCCCC , 0.0, 0.0 , 4.0 , 2.0);
+}
+
+.homeMenuButton:hover{
+	-fx-background-color: #BFEFFF;
+	-fx-effect: dropshadow( one-pass-box , #CCCCCC , 10.0,10.0,0.0,0.0);
+	-fx-text-fill: #FFFFFF;
+}
+
+.vendaButton{
+	-fx-background-repeat: stretch;   
+    -fx-background-size: 30.0 30.0;
+    -fx-background-position: left center;
+    -fx-font-weight: bold;
+    -fx-background-color: #E6E6E6;
+    -fx-effect: dropshadow( one-pass-box , #CCCCCC , 0.0, 0.0 , 4.0 , 2.0);
+}
+
+.vendaButton:hover{
+	-fx-background-color: #58ACFA;
+	-fx-effect: dropshadow( one-pass-box , #CCCCCC , 10.0,10.0,0.0,0.0);
+	-fx-text-fill: #FFFFFF;
+}
+
+.cadProdutoButton{
+	-fx-background-repeat: stretch;   
+    -fx-background-size: 30.0 30.0;
+    -fx-background-position: left center;
+    -fx-background-color: #E6E6E6;
+    -fx-effect: dropshadow( one-pass-box , #CCCCCC , 0.0, 0.0 , 4.0 , 2.0);
+}
+
+.cadProdutoButton:hover{
+	-fx-background-color: #58ACFA;
+	-fx-effect: dropshadow( one-pass-box , #CCCCCC , 10.0,10.0,0.0,0.0);
+	-fx-text-fill: #FFFFFF;
+}
+
+.vendaPanel{
+	-fx-effect: dropshadow( one-pass-box , #CCCCCC , 0.0, 0.0 , 4.0 , 2.0);
+	-fx-background-color: #FFFFFF;
+	-fx-background-radius: 20.0 20.0 20.0 20.0;
+}
+
+.vendaHeaderPanel{
+	-fx-effect: dropshadow( one-pass-box , #CCCCCC , 0.0, 0.0 , 4.0 , 2.0);
+}

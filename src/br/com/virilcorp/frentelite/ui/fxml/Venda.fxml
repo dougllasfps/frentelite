@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?scenebuilder-preview-i18n-resource ../../../../../../Messages.properties?>
+
+<AnchorPane prefHeight="726.0" prefWidth="1276.0" styleClass="container" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.virilcorp.frentelite.ui.venda.VendaController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <TitledPane fx:id="itensPane" animated="false" collapsible="false" layoutX="704.0" layoutY="152.0" prefHeight="262.0" prefWidth="515.0" styleClass="panel, panel-default, panel-title" text="%label.itens_venda">
+      <content>
+        <TableView fx:id="dataTable" prefHeight="200.0" prefWidth="200.0">
+          <columns>
+            <TableColumn fx:id="quantidadeColumn" prefWidth="75.0" text="%label.qtd" />
+            <TableColumn fx:id="produtoColumn" minWidth="250.0" prefWidth="250.0" text="%label.produtos" />
+            <TableColumn fx:id="precoVendaColumn" minWidth="90.0" prefWidth="93.0" text="%label.preco_venda" />
+            <TableColumn fx:id="totalColumn" minWidth="90.0" prefWidth="93.0" text="%label.total" />
+          </columns>
+        </TableView>
+      </content>
+    </TitledPane>
+    <TitledPane fx:id="categoriasPane" animated="false" collapsible="false" layoutX="26.0" layoutY="33.0" minWidth="136.0" prefHeight="187.0" prefWidth="600.0" styleClass="panel, panel-default, panel-title" text="%label.categorias">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="246.0" prefWidth="616.0">
+          <children>
+            <ScrollPane layoutX="0.0" layoutY="0.0" prefHeight="161.0" prefWidth="596.0">
+              <content>
+                <FlowPane id="produtosPanel" fx:id="categoriasPanel" prefHeight="199.0" prefWidth="596.0" />
+              </content>
+            </ScrollPane>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <TitledPane fx:id="produtosPane" animated="false" collapsible="false" layoutX="24.0" layoutY="278.0" minWidth="146.0" prefHeight="416.0" prefWidth="600.0" styleClass="panel-title, panel, panel-default" text="%label.produtos">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <ScrollPane layoutX="0.0" layoutY="0.0" prefHeight="390.0" prefWidth="596.0">
+              <content>
+                <FlowPane id="categoriasPanel" fx:id="produtosPanel" prefHeight="375.0" prefWidth="596.0" />
+              </content>
+            </ScrollPane>
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+    <Separator layoutX="652.0" layoutY="33.0" orientation="VERTICAL" prefHeight="666.0" />
+    <Pane layoutX="704.0" layoutY="516.0" prefHeight="176.0" prefWidth="515.0">
+      <children>
+        <Button layoutX="6.0" layoutY="37.0" mnemonicParsing="false" onAction="#handlePagamento" prefHeight="102.9609375" prefWidth="152.0" styleClass="btn, btn-success, btn-lg" text="%label.pagar" />
+        <Button layoutX="182.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleDelivery" prefHeight="102.9609375" prefWidth="152.0" styleClass="btn, btn-info, btn-lg" text="%label.delivey" />
+        <Button layoutX="350.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleCancelamento" prefHeight="102.9609375" prefWidth="152.0" styleClass="btn, btn-danger, btn-lg" text="%label.cancelar" />
+      </children>
+    </Pane>
+    <Pane layoutX="704.0" layoutY="89.0" prefHeight="46.0" prefWidth="515.0" styleClass="panel, panel-info">
+      <children>
+        <Label fx:id="lblProdutoAdicionado" layoutX="137.0" layoutY="15.0" text="%label.venda" />
+        <Label layoutX="11.0" layoutY="15.0" text="Ultimo Adicionado:" />
+      </children>
+    </Pane>
+    <TextField fx:id="txtTotalVenda" disable="true" editable="true" layoutX="1017.0" layoutY="437.0" opacity="1.0" prefHeight="46.0" prefWidth="200.0" styleClass="formTextField" />
+    <Label layoutX="950.0" layoutY="452.0" styleClass="formLabel" text="%label.subtotal" />
+    <TextField fx:id="txtCodigoProduto" layoutX="763.0" layoutY="45.0" onAction="#handleAdicionarProdutoPorCodigo" prefHeight="26.0" prefWidth="456.0" styleClass="formTextField" />
+    <Label layoutX="706.0" layoutY="50.0" styleClass="formLabel" text="%label.codigo" />
+    <TextField fx:id="txtDescricao" layoutX="131.0" layoutY="234.0" onAction="#handleBuscaProduto" prefHeight="25.999908447265625" prefWidth="491.0" styleClass="formTextField, form-control" />
+    <Label layoutX="26.0" layoutY="240.0" text="%label.busca_produto" />
+  </children>
+  <stylesheets>
+    <URL value="@theme.css" />
+    <URL value="@bootstrapfx.css" />
+  </stylesheets>
+</AnchorPane>

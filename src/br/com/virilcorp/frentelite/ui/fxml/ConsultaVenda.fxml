@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?scenebuilder-preview-i18n-resource ../../../../../../Messages.properties?>
+
+<AnchorPane minHeight="600.0" minWidth="700.0" prefHeight="600.0" prefWidth="750.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.com.virilcorp.frentelite.ui.venda.ConsultaVendasController">
+  <children>
+    <Label layoutX="110.0" layoutY="124.0" text="%label.data" />
+    <TextField fx:id="txtDataVenda" layoutX="110.0" layoutY="147.0" prefWidth="200.0" />
+    <Button layoutX="110.0" layoutY="197.0" mnemonicParsing="false" onAction="#handleSearch" styleClass="btn, btn-primary" text="%label.pesquisar" />
+    <Button layoutX="228.0" layoutY="197.0" mnemonicParsing="false" onAction="#handleShowDetails" styleClass="btn, btn-warning" text="%label.detalhes_venda" />
+    <TableView fx:id="dataTable" layoutX="100.0" layoutY="278.0" prefHeight="262.0" prefWidth="500.0">
+      <columns>
+        <TableColumn prefWidth="100.0" text="%label.numero" fx:id="numeroVendaColumn" />
+        <TableColumn prefWidth="200.0" text="%label.data" fx:id="dataVendaColumn" />
+        <TableColumn prefWidth="200.0" text="%label.valor" fx:id="valorVendaColumn" />
+      </columns>
+    </TableView>
+    <Label layoutX="97.0" layoutY="61.0" styleClass="h3" text="%label.consulta_venda" />
+  </children>
+  <stylesheets>
+    <URL value="@bootstrapfx.css" />
+    <URL value="@theme.css" />
+  </stylesheets>
+</AnchorPane>

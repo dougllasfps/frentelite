@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-preview-i18n-resource ../../../../../../Messages.properties?>
+
+<AnchorPane id="AnchorPane" blendMode="SRC_OVER" prefHeight="694.0" prefWidth="1071.0" styleClass="container" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.com.virilcorp.frentelite.ui.produto.ProdutoController">
+  <children>
+    <Pane layoutX="31.0" layoutY="73.0" prefHeight="300.0" prefWidth="571.0" styleClass="panel" />
+    <Label layoutX="72.0" layoutY="303.0" prefWidth="104.0" text="%label.unidade_medida">
+      <font>
+        <Font size="12.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label layoutX="72.0" layoutY="90.0" text="%label.codigo" />
+    <Label layoutX="72.0" layoutY="158.0" prefWidth="87.0" text="%label.descricao" />
+    <Label font="$x1" layoutX="72.0" layoutY="228.0" text="%label.preco_custo" />
+    <Label font="$x1" layoutX="328.0" layoutY="231.0" text="%label.preco_venda" />
+    <Label layoutX="329.0" layoutY="299.0" text="%label.categoria" />
+    <TextField fx:id="txtCodigo" layoutX="72.0" layoutY="113.0" onAction="#handleSave" prefHeight="30.0" prefWidth="490.0" />
+    <TextField fx:id="txtDescricao" layoutX="72.0" layoutY="183.0" onAction="#handleSave" prefHeight="30.0" prefWidth="490.0" />
+    <TextField fx:id="txtValorCusto" layoutX="72.0" layoutY="253.0" onAction="#handleSave" prefHeight="30.0" prefWidth="224.0" />
+    <TextField fx:id="txtValorVenda" layoutX="329.0" layoutY="253.0" onAction="#handleSave" prefHeight="30.0" prefWidth="233.0" />
+    <ComboBox fx:id="comboMedida" layoutX="72.0" layoutY="320.0" prefHeight="30.0" prefWidth="224.0" styleClass="split-menu-btn">
+      <items>
+        <FXCollections fx:factory="observableArrayList" />
+      </items>
+    </ComboBox>
+    <ComboBox fx:id="comboCategorias" layoutX="329.0" layoutY="320.0" prefHeight="30.0" prefWidth="233.0" styleClass="split-menu-btn">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="Selecione..." />
+        </FXCollections>
+      </items>
+    </ComboBox>
+    <Pane layoutX="32.0" layoutY="388.0" prefHeight="56.0" prefWidth="636.0" styleClass="formPanel">
+      <children>
+        <Button fx:id="btnExcluir" layoutX="490.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="34.0" prefWidth="118.0" styleClass="btn, btn-danger" text="%label.deletar">
+          <font>
+            <Font name="Arial" size="12.0" fx:id="x2" />
+          </font>
+        </Button>
+        <Button fx:id="btnNovo" font="$x2" layoutX="334.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleNewRegister" prefHeight="34.0" prefWidth="118.0" styleClass="btn, btn-warning" text="%label.novo" textAlignment="CENTER" />
+        <Button fx:id="btnPesquisar" font="$x2" layoutX="188.0" layoutY="11.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="34.0" prefWidth="118.0" styleClass="btn, btn-info" text="%label.pesquisar" textAlignment="CENTER" />
+      </children>
+    </Pane>
+    <Button fx:id="btnSalvar" font="$x2" layoutX="72.0" layoutY="399.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="34.0" prefWidth="118.0" styleClass="btn, btn-success" text="%label.salvar" textAlignment="CENTER" />
+    <TableView fx:id="dataTable" layoutX="32.0" layoutY="462.0" onMouseClicked="#onRowSelect" prefHeight="209.0" prefWidth="941.0" styleClass="table-view">
+      <columns>
+        <TableColumn editable="false" minWidth="100.0" prefWidth="75.0" text="%label.codigo" fx:id="codigoColumn" />
+        <TableColumn prefWidth="313.0" text="%label.descricao" fx:id="descricaoColumn" />
+        <TableColumn minWidth="110.0" prefWidth="110.0" text="%label.unidade_medida" fx:id="unidadeMedidaColumn" />
+        <TableColumn prefWidth="120.0" text="%label.preco_custo" fx:id="valorCustoColumn" />
+        <TableColumn prefWidth="120.0" text="%label.preco_venda" fx:id="valorVendaColumn" />
+        <TableColumn minWidth="176.0" prefWidth="100.0" text="%label.categoria" fx:id="categoriaColumn" />
+      </columns>
+    </TableView>
+    <Pane layoutX="640.0" layoutY="73.0" onMouseClicked="#carregarFoto" prefHeight="300.0" prefWidth="247.0" styleClass="panel, panel-default">
+      <children>
+        <ImageView fx:id="imageProdutoView" fitHeight="209.00001525878906" fitWidth="220.28986778128808" layoutX="13.0" layoutY="42.0" onMouseClicked="#carregarFoto" pickOnBounds="true" preserveRatio="true" />
+        <Label fx:id="lblFotoStatus" layoutX="35.0" layoutY="109.0" onMouseClicked="#carregarFoto" text="" />
+      </children>
+    </Pane>
+    <Label layoutX="32.0" layoutY="33.0" styleClass="h3" text="%label.produtos" />
+  </children>
+  <stylesheets>
+    <URL value="@theme.css" />
+    <URL value="@bootstrapfx.css" />
+  </stylesheets>
+</AnchorPane>

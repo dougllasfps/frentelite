@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?scenebuilder-preview-i18n-resource ../../../../../../Messages.properties?>
+
+<AnchorPane prefHeight="339.9999000000025" prefWidth="366.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.com.virilcorp.frentelite.ui.config.BalancaController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Label layoutX="35.0" layoutY="34.0" text="%label.serial_port" />
+    <Label layoutX="213.0" layoutY="34.0" text="%label.baudrate" />
+    <Label layoutX="35.0" layoutY="85.0" text="%label.data_bits" />
+    <Label layoutX="212.0" layoutY="85.0" text="%label.stop_bits" />
+    <Label layoutX="35.0" layoutY="138.0" text="%label.parity" />
+    <TextField fx:id="inputSerialPort" layoutX="35.0" layoutY="53.0" prefWidth="110.0" />
+    <TextField fx:id="inputBaudrate" layoutX="211.0" layoutY="53.0" prefWidth="110.0" />
+    <TextField fx:id="inputDataBits" layoutX="35.0" layoutY="103.0" prefWidth="110.0" />
+    <TextField fx:id="inputStopBits" layoutX="211.0" layoutY="103.0" prefWidth="110.0" />
+    <TextField fx:id="inputParity" layoutX="35.0" layoutY="156.0" prefWidth="110.0" />
+    <Button layoutX="35.0" layoutY="294.0" mnemonicParsing="false" onAction="#handleSave" text="%label.salvar" />
+    <Button layoutX="103.0" layoutY="294.0" mnemonicParsing="false" onAction="#handleCancel" text="%label.cancelar" />
+    <Label layoutX="35.0" layoutY="194.0" text="%label.bytes_size" />
+    <Label layoutX="211.0" layoutY="141.0" text="%label.ascirequest" />
+    <TextField fx:id="inputAsci" layoutX="213.0" layoutY="159.0" prefWidth="108.0" />
+    <TextField fx:id="inputBytes" layoutX="35.0" layoutY="219.0" prefWidth="108.0" />
+  </children>
+</AnchorPane>

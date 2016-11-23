@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="472.0" prefWidth="682.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.com.virilcorp.frentelite.ui.categoria.CategoriaController">
+  <children>
+    <Pane layoutX="27.0" layoutY="82.0" prefHeight="104.0" prefWidth="616.0" styleClass="panel">
+      <children>
+        <Label layoutX="26.0" layoutY="21.0" text="Descrição: *" />
+        <TextField fx:id="inputDescricao" layoutX="26.0" layoutY="45.0" prefHeight="33.27734375" prefWidth="452.0" styleClass="text-left" />
+      </children>
+    </Pane>
+    <Pane layoutX="27.0" layoutY="193.0" prefHeight="57.0" prefWidth="616.0" styleClass="formPanel">
+      <children>
+        <Button fx:id="btnSalvar" layoutX="26.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="25.0" prefWidth="87.0" styleClass="btn, btn-success, ok-icon, btn-icon" text="Salvar">
+          <stylesheets>
+            <URL value="@theme.css" />
+          </stylesheets>
+        </Button>
+        <Button fx:id="btnPesquisar" layoutX="149.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="25.0" prefWidth="87.0" styleClass="btn, btn-info" text="pesquisar" />
+        <Button fx:id="btnExcluir" layoutX="389.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="25.0" prefWidth="87.0" styleClass="btn, btn-danger, btn-default" text="Excluir" />
+        <Button fx:id="btnNovo" layoutX="265.0" layoutY="8.0" mnemonicParsing="false" onAction="#handleNewRegister" prefHeight="25.0" prefWidth="87.0" styleClass="btn, btn-warning" text="Novo" />
+      </children>
+    </Pane>
+    <TableView fx:id="dataTable" layoutX="27.0" layoutY="250.0" onMouseClicked="#onRowSelect" prefHeight="200.0" prefWidth="616.0">
+      <columns>
+        <TableColumn prefWidth="615.0" text="Descrição" fx:id="descricaoColumn" />
+      </columns>
+    </TableView>
+    <Label layoutX="27.0" layoutY="36.0" styleClass="h3" text="Categorias" />
+  </children>
+  <stylesheets>
+    <URL value="@bootstrapfx.css" />
+    <URL value="@theme.css" />
+  </stylesheets>
+</AnchorPane>

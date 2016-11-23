@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="437.0" prefWidth="618.0" styleClass="white-container" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.virilcorp.frentelite.ui.login.LoginController">
+  <children>
+    <GridPane alignment="CENTER" layoutX="354.0" layoutY="88.0" prefHeight="259.0" prefWidth="200.0">
+      <children>
+        <TextField id="userName" fx:id="inputLogin" alignment="CENTER" onAction="#handleAutenticacao" prefHeight="40.0" promptText="Login" styleClass="formTextField" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+        <PasswordField id="userPassword" fx:id="inputSenha" alignment="CENTER" onAction="#handleAutenticacao" prefHeight="40.0" promptText="Senha" styleClass="formTextField" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+        <Label labelFor="$inputLogin" text="Usuário:" GridPane.columnIndex="0" />
+        <Label labelFor="$inputSenha" text="Senha:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <Button mnemonicParsing="false" onAction="#handleAutenticacao" onKeyPressed="#handleAutenticacaoEnterSubmit" prefHeight="40.0" prefWidth="200.0" text="Enviar" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="CENTER">
+               <styleClass>
+                  <String fx:value="btn-success" />
+                  <String fx:value="btn" />
+               </styleClass></Button>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints maxHeight="62.0" minHeight="29.0" prefHeight="32.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="86.0" minHeight="47.0" prefHeight="47.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="68.0" minHeight="21.0" prefHeight="33.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="130.0" minHeight="49.0" prefHeight="49.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="132.0" minHeight="55.0" prefHeight="94.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+      <ImageView fitHeight="291.0" fitWidth="271.0" layoutX="35.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.jpg" />
+         </image>
+      </ImageView>
+      <Line endX="406.0" layoutX="147.0" layoutY="52.0" startX="-100.0" stroke="#993eab" strokeWidth="2.0" />
+      <Line endX="406.0" layoutX="147.0" layoutY="379.0" startX="-100.0" stroke="#993eab" strokeWidth="2.0" />
+  </children>
+  <stylesheets>
+    <URL value="@theme.css" />
+    <URL value="@bootstrapfx.css" />
+  </stylesheets>
+</Pane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane prefHeight="617.0" prefWidth="632.0000999999975" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.com.virilcorp.frentelite.ui.venda.PDFViewController">
+  <center>
+    <Pagination fx:id="pagination" prefHeight="536.0" prefWidth="623.0" />
+  </center>
+  <padding>
+    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+  </padding>
+  <fx:define>
+    <ScrollPane fx:id="scroller" pannable="true" />
+  </fx:define>
+  <top>
+    <HBox prefHeight="45.0" prefWidth="623.0" spacing="5.0">
+      <Button onAction="#loadFile" text="Visualizar" />
+      <Label text="Zoom:" />
+      <Button onAction="#zoomOut" text="-" />
+      <Button onAction="#zoomIn" text="+" />
+      <Button onAction="#zoomFit" text="Pág. Inteira" />
+      <Button onAction="#zoomWidth" prefWidth="75.0" text="Largura" />
+      <Label fx:id="currentZoomLabel" />
+      <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+      </padding>
+      <Label text="Data:" />
+      <TextField fx:id="inputData" prefWidth="128.0" />
+    </HBox>
+  </top>
+</BorderPane>

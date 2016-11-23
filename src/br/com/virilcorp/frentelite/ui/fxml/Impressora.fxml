@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+
+<?scenebuilder-preview-i18n-resource ../../../../../../Messages.properties?>
+
+<BorderPane minHeight="300.0" minWidth="300.0" prefWidth="480.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.com.virilcorp.frentelite.ui.config.ConfiguracaoImpressoraController">
+  <bottom>
+    <Pane prefHeight="66.0" prefWidth="600.0" />
+  </bottom>
+  <center>
+    <GridPane>
+      <children>
+        <Label text="%label.porta" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Label text="%label.velocidade" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+        <TextField prefWidth="191.0" GridPane.columnIndex="1" GridPane.rowIndex="0" fx:id="txtPorta" />
+        <TextField prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="txtVelocidade"/>
+        <Button mnemonicParsing="false" text="%label.salvar" GridPane.columnIndex="0" GridPane.rowIndex="2"  onAction="#handleSave"/>
+        <Button mnemonicParsing="false" text="%label.cancelar" GridPane.columnIndex="1" GridPane.rowIndex="2" onAction="#handleCancel" />
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="98.0" />
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="188.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </center>
+  <left>
+    <Pane prefHeight="200.0" prefWidth="72.0" />
+  </left>
+  <right>
+    <Pane prefHeight="200.0" prefWidth="60.0" />
+  </right>
+  <top>
+    <Pane prefHeight="66.0" prefWidth="600.0" />
+  </top>
+</BorderPane>

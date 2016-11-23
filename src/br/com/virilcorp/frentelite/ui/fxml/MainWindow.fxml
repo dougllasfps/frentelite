@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-preview-i18n-resource ../../../../../../Messages.properties?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1072.0" styleClass="white-container" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.virilcorp.frentelite.ui.main.MainWindowController">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="1421.0">
+         <children>
+   	    <MenuBar fx:id="barraDeMenu" minHeight="-1.0" prefHeight="0.0" prefWidth="1421.0" styleClass="menu">
+   	      <menus>
+   	        <Menu mnemonicParsing="false" styleClass="grayFormLabel" text="Cadastros" visible="true">
+   	          <items>
+   	            <MenuItem mnemonicParsing="false" text="Usuário" onAction="#handleMenuUsuario" />
+   	            <MenuItem mnemonicParsing="false" onAction="#handleMenuProduto" text="Produto" />
+   	            <MenuItem mnemonicParsing="false" onAction="#handleMenuTara" text="Tara" />
+   	            <MenuItem mnemonicParsing="false" onAction="#handleMenuCategoria" text="Categoria" />
+   	          </items>
+   	        </Menu>
+   	        <Menu mnemonicParsing="false" styleClass="grayFormLabel" text="Venda">
+   	          <items>
+   	            <MenuItem mnemonicParsing="false" onAction="#handleMenuVenda" text="Realizar" />
+   	            <MenuItem mnemonicParsing="false" onAction="#handleMenuConsultaVenda" text="Consultar" />
+   	            <MenuItem mnemonicParsing="false" onAction="#handleMenuDelivery" text="Delivery" />
+   	          </items>
+   	        </Menu>
+   	        <Menu mnemonicParsing="false" text="Gerenciamento de Caixa">
+   	          <items>
+   	            <MenuItem mnemonicParsing="false" onAction="#handleMenuFluxoCaixa" text="Fluxo de Caixa" />
+   	          </items>
+   	        </Menu>
+   	        <Menu mnemonicParsing="false" text="Configurações">
+   	          <items>
+   	          	<MenuItem mnemonicParsing="false" onAction="#handleMenuEstabelecimento" text="Estabelecimento" />
+   	            <MenuItem mnemonicParsing="false" onAction="#handleMenuConfigBalanca" text="Balança" />
+   	            <MenuItem mnemonicParsing="false" onAction="#handleMenuConfigImpressora" text="Impressora" />
+   	          </items>
+   	        </Menu>
+   	        <Menu mnemonicParsing="false" styleClass="grayFormLabel" text="Opções">
+   	          <items>
+   	            <MenuItem mnemonicParsing="false" onAction="#handleExit" text="Sair" />
+   	          </items>
+   	        </Menu>
+   	      </menus>
+   	    </MenuBar>
+         </children>
+      </HBox>
+   	<BorderPane layoutY="77.0" prefHeight="473.0" prefWidth="1421.0" styleClass="logoBG">
+   	  <bottom>
+   	    <Pane prefHeight="119.0" prefWidth="1421.0" styleClass="homeBackground" />
+   	  </bottom>
+   	  <center>
+   	    <Pane prefHeight="493.0" prefWidth="604.0">
+   	      <children>
+   	        <GridPane layoutX="0.0" layoutY="116.0" prefHeight="425.0" prefWidth="510.0">
+   	          <children>
+   	            <Button mnemonicParsing="false" onAction="#handleMenuVenda" prefHeight="144.0" prefWidth="241.0" text="%label.venda">
+   	                     <styleClass>
+   	                        <String fx:value="btn" />
+   	                        <String fx:value="btn-info" />
+   	                        <String fx:value="homeMenuButton" />
+   	                        <String fx:value="menuVendaButton" />
+   	                        <String fx:value="btn-lg" />
+   	                     </styleClass>
+                        </Button>
+   	            <Button mnemonicParsing="false" onAction="#handleMenuCategoria" prefHeight="144.0" prefWidth="240.0" text="%label.categorias" GridPane.rowIndex="4">
+   	                     <styleClass>
+   	                        <String fx:value="btn" />
+   	                        <String fx:value="btn-lg" />
+   	                        <String fx:value="menuCategoriaButton" />
+   	                        <String fx:value="homeMenuButton" />
+   	                        <String fx:value="btn-danger" />
+   	                     </styleClass>
+                        </Button>
+   	            <Button mnemonicParsing="false" onAction="#handleMenuTara" prefHeight="130.0" prefWidth="315.0" text="%label.taras" GridPane.rowIndex="2">
+   	                     <styleClass>
+   	                        <String fx:value="btn" />
+   	                        <String fx:value="btn-warning" />
+   	                        <String fx:value="btn-lg" />
+   	                        <String fx:value="homeMenuButton" />
+   	                        <String fx:value="menuTaraButton" />
+   	                     </styleClass>
+                        </Button>
+   	            <Button mnemonicParsing="false" onAction="#handleMenuFluxoCaixa" prefHeight="130.0" prefWidth="248.0" text="Fluxo Caixa" GridPane.columnIndex="2" GridPane.rowIndex="4">
+   	                     <styleClass>
+   	                        <String fx:value="btn" />
+   	                        <String fx:value="btn-info" />
+   	                        <String fx:value="btn-lg" />
+   	                        <String fx:value="homeMenuButton" />
+   	                        <String fx:value="menuFluxoCaixaButton" />
+   	                     </styleClass>
+                        </Button>
+   	            <Button mnemonicParsing="false" onAction="#handleMenuProduto" prefHeight="144.0" prefWidth="240.0" styleClass="btn, btn-lg, btn-warning, homeMenuButton, menuProdutoButton" text="%label.produtos" GridPane.columnIndex="2" />
+   	            <Button mnemonicParsing="false" onAction="#handleMenuUsuario" prefHeight="139.0" prefWidth="239.0" text="%label.usuarios" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <styleClass>
+                     <String fx:value="btn" />
+                     <String fx:value="btn-danger" />
+                     <String fx:value="btn-lg" />
+                     <String fx:value="homeMenuButton" />
+                     <String fx:value="menuUsuarioButton" />
+                  </styleClass>
+                 </Button>
+   	          </children>
+   	          <columnConstraints>
+   	            <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="240.0" prefWidth="240.0" />
+   	            <ColumnConstraints hgrow="SOMETIMES" maxWidth="30.0" minWidth="30.0" prefWidth="30.0" />
+   	            <ColumnConstraints hgrow="SOMETIMES" maxWidth="240.0" minWidth="240.0" prefWidth="240.0" />
+   	          </columnConstraints>
+   	          <rowConstraints>
+   	                  <RowConstraints maxHeight="120.0" minHeight="120.0" prefHeight="120.0" vgrow="SOMETIMES" />
+   	                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   	            <RowConstraints maxHeight="120.0" minHeight="120.0" prefHeight="120.0" vgrow="SOMETIMES" />
+   	                  <RowConstraints maxHeight="30.0" minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+   	            <RowConstraints maxHeight="120.0" minHeight="120.0" prefHeight="120.0" vgrow="SOMETIMES" />
+   	          </rowConstraints>
+   	        </GridPane>
+   	      </children>
+   	    </Pane>
+   	  </center>
+   	  <left>
+   	    <Pane prefHeight="493.0" prefWidth="681.0" />
+   	  </left>
+   	  <right>
+   	    <Pane prefHeight="524.0" prefWidth="168.0" />
+   	  </right>
+         <top>
+            <Pane prefHeight="1.0" prefWidth="1421.0" BorderPane.alignment="CENTER" />
+         </top>
+   	</BorderPane>
+	        <Label layoutX="52.0" layoutY="557.0" text="Operador:">
+	          <font>
+	            <Font name="Arial Bold" size="12.0" fx:id="x2" />
+	          </font>
+	        </Label>
+	        <Label fx:id="lblUsuario" font="$x2" layoutX="120.0" layoutY="557.0" prefWidth="216.0" text="Label" />
+	        <Label font="$x2" layoutX="52.0" layoutY="585.0" text="Último Acesso:" />
+	        <Label font="$x2" layoutX="52.0" layoutY="644.0" text="FrenteLite Versão 1.0" />
+	        <Label fx:id="lblUltimoAcesso" font="$x2" layoutX="147.0" layoutY="585.0" prefHeight="16.0" prefWidth="251.0" text="Label" />
+      <Label layoutX="52.0" layoutY="614.0" text="Status Impressora:" />
+      <Label fx:id="lblStatusImpressora" layoutX="173.0" layoutY="614.0" text="Label" />
+   </children>
+   	  <stylesheets>
+   	    <URL value="@theme.css" />
+   	    <URL value="@bootstrapfx.css" />
+   	  </stylesheets>
+</AnchorPane>

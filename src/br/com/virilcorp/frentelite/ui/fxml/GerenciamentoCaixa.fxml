@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+<?scenebuilder-preview-i18n-resource ../../../../../../Messages.properties?>
+
+<GridPane prefHeight="300.0" prefWidth="544.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.com.virilcorp.frentelite.ui.GerenciamentoCaixaController">
+  <children>
+    <Button mnemonicParsing="false" onAction="#handleNovaSangria" prefHeight="84.0" prefWidth="270.0" styleClass="btn, btn-default" text="%label.sangria" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+    <Button mnemonicParsing="false" onAction="#handleAberturaCaixa" prefHeight="84.0" prefWidth="270.0" styleClass="btn, btn-success" text="%label.abertura_caixa" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+    <Button mnemonicParsing="false" onAction="#handleCancelamentoVenda" prefHeight="84.0" prefWidth="270.0" styleClass="btn, btn-danger" text="%label.cancelar_venda" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+    <Button mnemonicParsing="false" onAction="#handleFechamentoCaixa" prefHeight="84.0" prefWidth="270.0" styleClass="btn, btn-primary" text="%label.fechamento_caixa" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+  </children>
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="270.0" prefWidth="270.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="270.0" minWidth="270.0" prefWidth="270.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="20.0" minWidth="20.0" prefWidth="20.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="150.0" minHeight="150.0" prefHeight="150.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="20.0" minHeight="20.0" prefHeight="20.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+  <stylesheets>
+    <URL value="@bootstrapfx.css" />
+    <URL value="@theme.css" />
+  </stylesheets>
+</GridPane>

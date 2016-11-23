@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?scenebuilder-preview-i18n-resource ../../../../../../Messages.properties?>
+
+<AnchorPane prefHeight="490.0" prefWidth="584.0" styleClass="container" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.com.virilcorp.frentelite.ui.tara.TaraController">
+  <children>
+    <Label layoutX="45.0" layoutY="28.0" styleClass="h3" text="%label.taras" />
+    <Pane layoutX="45.0" layoutY="211.0" prefHeight="54.0" prefWidth="474.0" styleClass="formPanel">
+      <children>
+        <Button fx:id="btnNovo" layoutX="237.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleNewRegister" prefHeight="30.8984375" prefWidth="96.0001220703125" styleClass="btn, btn-warning" text="Novo" />
+        <Button fx:id="btnSalvar" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleSave" prefHeight="30.8984375" prefWidth="96.0001220703125" styleClass="btn, btn-success" text="Salvar" />
+        <Button fx:id="btnPesquisar" layoutX="126.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="30.8984375" prefWidth="96.0001220703125" styleClass="btn, btn-info" text="Pesquisar" />
+        <Button fx:id="btnExcluir" layoutX="345.0" layoutY="14.0" mnemonicParsing="false" onAction="#handleDelete" prefHeight="30.8984375" prefWidth="96.0001220703125" styleClass="btn-danger, btn" text="Excluir" />
+      </children>
+    </Pane>
+    <Pane layoutX="28.0" layoutY="73.0" prefHeight="142.0" prefWidth="505.0" styleClass="formPanel">
+      <children>
+        <TextField fx:id="inputPeso" layoutX="31.0" layoutY="97.0" prefHeight="30.8984375" prefWidth="427.0001220703125" />
+        <Label layoutX="33.0" layoutY="80.0" text="Peso:" />
+        <Label layoutX="33.0" layoutY="14.0" text="Descrição:" />
+        <TextField fx:id="inputDescricao" layoutX="33.0" layoutY="36.0" prefHeight="30.8984375" prefWidth="428.0" />
+      </children>
+    </Pane>
+    <TableView fx:id="dataTable" layoutX="45.0" layoutY="285.0" onMouseClicked="#onRowSelect" prefHeight="142.0" prefWidth="474.0">
+      <columns>
+        <TableColumn minWidth="350.0" prefWidth="350.0" text="Descrição" fx:id="descricaoColumn" />
+        <TableColumn maxWidth="124.0" minWidth="124.0" prefWidth="124.0" text="Peso" fx:id="pesoColumn" />
+      </columns>
+    </TableView>
+  </children>
+  <stylesheets>
+    <URL value="@theme.css" />
+    <URL value="@bootstrapfx.css" />
+  </stylesheets>
+</AnchorPane>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?scenebuilder-preview-i18n-resource ../../../../../../Messages.properties?>
+
+<AnchorPane minHeight="558.0" minWidth="900.0" prefHeight="700.0" prefWidth="1098.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.com.virilcorp.frentelite.ui.delivery.ConsultaDeliveryController">
+  <children>
+    <Label layoutX="47.0" layoutY="139.0" text="%label.data" />
+    <TextField fx:id="txtData" layoutX="47.0" layoutY="165.0" onAction="#handleSearch" prefHeight="28.0" prefWidth="208.0" />
+    <TableView fx:id="dataTable" layoutX="39.0" layoutY="255.0" prefHeight="342.0" prefWidth="1000.0">
+      <columns>
+        <TableColumn prefWidth="100.0" text="%label.data" fx:id="dataColumn" />
+        <TableColumn prefWidth="100.0" text="%label.situacao" fx:id="situacaoColumn" />
+        <TableColumn prefWidth="100.0" text="Valor" fx:id="valorColumn" />
+        <TableColumn prefWidth="500.0" text="%label.cliente" fx:id="clienteColumn" />
+        <TableColumn prefWidth="200.0" text="%label.telefone" fx:id="telefoneColumn" />
+      </columns>
+    </TableView>
+    <Button layoutX="275.0" layoutY="165.0" minHeight="28.0" mnemonicParsing="false" onAction="#handleSearch" prefHeight="28.0" prefWidth="136.0" styleClass="btn, btn-primary" text="%label.pesquisar" />
+    <Button layoutX="722.0" layoutY="625.0" mnemonicParsing="false" onAction="#handlePagamento" prefHeight="42.0" prefWidth="136.0" styleClass="btn, btn-success" text="%label.pagamento" />
+    <Button layoutX="903.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleCancelarEntrega" prefHeight="42.0" prefWidth="136.0" styleClass="btn, btn-danger" text="%label.cancelar_entrega" />
+    <Button layoutX="39.0" layoutY="625.0" mnemonicParsing="false" onAction="#handleDetalhesVenda" prefHeight="42.0" prefWidth="136.0" styleClass="btn, btn-warning" text="%label.detalhes_venda" />
+    <Label layoutX="36.0" layoutY="67.0" styleClass="h3" text="%label.consulta_delivery" />
+  </children>
+  <stylesheets>
+    <URL value="@bootstrapfx.css" />
+    <URL value="@theme.css" />
+  </stylesheets>
+</AnchorPane>

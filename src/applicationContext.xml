@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx" 
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task.xsd">
+
+    <context:property-placeholder location="classpath:project.properties" />
+    <context:component-scan base-package="br.com.virilcorp" />
+
+    <context:annotation-config />
+    <tx:annotation-driven  />
+	
+    <!-- traduzir as exceptions de persistencia do spring -->
+    <bean id="persistenceExceptionTranslationPostProcessor" 
+            class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+    <!-- Configuração do dataSource -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${jdbc.driver}" />
+        <property name="url" value="${jdbc.url}" />
+        <property name="username" value="${jdbc.username}" />
+        <property name="password" value="${jdbc.password}" />
+    </bean>
+
+    <!--  jpa EntityManager -->
+    <bean id="entityManagerFactory"
+          class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" depends-on="dataSource">
+        <property name="dataSource" ref="dataSource" />
+        <property name="persistenceUnitName" value="FrenteLitePU" />
+        <property name="jpaVendorAdapter">
+                <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+        </property>
+        <property name="jpaProperties">
+                <props>
+                        <prop key="hibernate.dialect">${hibernate.dialect}</prop>
+                        <prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+                        <prop key="cache.provider_class">org.hibernate.cache.NoCacheProvider</prop>
+                        <prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+                        <prop key="hibernate.generate_statistics">false</prop>
+                        <prop key="hibernate.temp.use_jdbc_metadata_defaults">false</prop>
+                </props>
+        </property>
+        <property name="packagesToScan">
+                <list>
+                    <value>br.com.virilcorp.frentelite.model</value>
+                </list>
+        </property>
+    </bean>
+
+    <!--  Transaction Managers -->
+    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+        <property name="entityManagerFactory" ref="entityManagerFactory" />
+    </bean>
+
+    <bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate" lazy-init="true">
+        <property name="transactionManager" ref="transactionManager" />
+    </bean>
+    <!-- para reconhecer anotações como @PersistentContext e outras do JavaEE relacionadas a persistencia -->
+    <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor" />
+    <bean name="openEntityManagerInViewInterceptor" class="org.springframework.orm.jpa.support.OpenEntityManagerInViewInterceptor" />
+
+</beans>

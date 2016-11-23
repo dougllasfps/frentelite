@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="false" prefHeight="684.0" prefWidth="1310.0" styleClass="container" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.com.virilcorp.frentelite.ui.venda.VendaControllerOld">
+  <children>
+    <TextField fx:id="inputBusca" layoutX="52.0" layoutY="124.0" onAction="#handleSearch" prefHeight="33.0" prefWidth="512.0" styleClass="inputText" />
+    <TextField id="inputTotal" fx:id="inputTotalVenda" disable="true" focusTraversable="true" layoutX="1065.0" layoutY="546.0" opacity="1.0" prefHeight="48.0" prefWidth="180.0" styleClass="inputText, vendaDisabled, textFieldBlue, formPanel" />
+    <Label layoutX="52.0" layoutY="89.0" prefWidth="88.0" styleClass="formLabel" text="Busca:" />
+    <TableView fx:id="dataTable" layoutX="634.0" layoutY="196.0" prefHeight="325.0" prefWidth="609.0" styleClass="table-view">
+      <columns>
+        <TableColumn minWidth="80.0" prefWidth="80.0" text="       QTD" fx:id="qtdColumn" />
+        <TableColumn minWidth="210.0" prefWidth="210.0" text="Produto" fx:id="descricaoColumn" />
+        <TableColumn minWidth="93.0" prefWidth="93.0" text="         UND" fx:id="unidMedidaColumn" />
+        <TableColumn prefWidth="100.0" text="        Total" fx:id="valorVendaColumn" />
+      </columns>
+    </TableView>
+    <Separator layoutX="60.0" layoutY="46.0" prefWidth="988.0" />
+    <Label layoutX="788.0" layoutY="633.0" onMouseClicked="#handlePagamento" styleClass="commandLabel" text="F10 - Pagamento  |" wrapText="true">
+      <font>
+        <Font name="System Bold" size="14.0" fx:id="x1" />
+      </font>
+    </Label>
+    <Label font="$x1" layoutX="919.0" layoutY="633.0" onMouseClicked="#abrirBuscaProduto" styleClass="commandLabel" text="CTRL + F12 - Busca Produto |" />
+    <Separator layoutX="0.0" layoutY="600.0" prefWidth="1310.0" />
+    <Pane layoutX="634.0" layoutY="89.0" prefHeight="68.0" prefWidth="611.0" styleClass="formPanel">
+      <children>
+        <Label fx:id="lbDescProduto" layoutX="31.0" layoutY="5.0" prefHeight="58.0" prefWidth="447.0" styleClass="produtoVendaLabel" text="CAIXA LIVRE" textAlignment="CENTER" />
+      </children>
+    </Pane>
+    <Label font="$x1" layoutX="1122.0" layoutY="633.0" onMouseClicked="#clear" styleClass="commandLabel" text="CTRL + F10 - Cancelar Venda" />
+    <Label id="labelUsuarioLogado" fx:id="lbUsuarioLogado" layoutX="56.0" layoutY="23.0" styleClass="formLabel" text="Usuário" />
+    <Button layoutX="900.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#clear" prefHeight="43.0" prefWidth="109.0" styleClass="cancelButton, vendaButton" text="Cancelar" />
+    <Button layoutX="768.0" layoutY="560.0" mnemonicParsing="false" onMouseClicked="#handlePagamento" prefHeight="43.0" prefWidth="109.0" styleClass="payButton, vendaButton" text="Pagar" />
+    <Label layoutX="900.0" layoutY="14.0" text="FrenteLite Versão 1.0 - 2016" />
+    <FlowPane fx:id="produtosPanel" layoutX="52.0" layoutY="196.0" prefHeight="398.0" prefWidth="512.0" styleClass="formPanel" />
+    <Separator layoutX="587.0" layoutY="89.0" orientation="VERTICAL" prefHeight="505.0" />
+    <Button fx:id="btnHome" layoutX="52.0" layoutY="627.0" mnemonicParsing="false" onAction="#initProductsPanel" prefHeight="33.0" prefWidth="107.0" styleClass="homeButton, formButton" text="Inicio" />
+    <Button layoutX="214.0" layoutY="627.0" mnemonicParsing="false" onAction="#handleProdutosMaisVendidos" prefHeight="32.9998779296875" styleClass="formButton" text="Mais Vendidos" />
+    <Button layoutX="637.0" layoutY="560.0" mnemonicParsing="false" onAction="#handleDelivery" prefHeight="43.0" prefWidth="109.0" text="Delivery" />
+  </children>
+  <stylesheets>
+    <URL value="@theme.css" />
+  </stylesheets>
+</AnchorPane>

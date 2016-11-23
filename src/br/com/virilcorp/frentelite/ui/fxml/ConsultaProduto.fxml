@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="632.0" prefWidth="846.0" styleClass="mainFxmlClass, container" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.com.virilcorp.frentelite.ui.produto.ConsultaProdutoController">
+  <children>
+    <Label layoutX="56.0" layoutY="137.0" styleClass="formLabel" text="Código :" />
+    <Label layoutX="56.0" layoutY="184.0" styleClass="formLabel" text="Descrição:" />
+    <TextField fx:id="txtCodigo" layoutX="162.0" layoutY="133.0" onAction="#find" prefHeight="35.0" prefWidth="564.0" styleClass="inputTextSmaller" />
+    <TextField fx:id="txtDescricao" layoutX="162.0" layoutY="180.0" onAction="#find" prefHeight="35.0" prefWidth="564.0" styleClass="inputTextSmaller" />
+    <Button fx:id="btnConsultar" layoutX="48.0" layoutY="242.0" minHeight="22.0" mnemonicParsing="false" onAction="#find" prefHeight="39.90234375" prefWidth="114.0" styleClass="formButton" text="Consultar" />
+    <Button layoutX="203.0" layoutY="242.0" minHeight="30.0" mnemonicParsing="false" onAction="#abrirCadastroProduto" prefHeight="40.0" prefWidth="114.00009999999747" styleClass="formButton" text="Cadastrar" />
+    <TableView fx:id="dataTable" layoutX="46.0" layoutY="316.0" prefHeight="278.0" prefWidth="754.0" styleClass="table-view">
+      <columns>
+        <TableColumn editable="false" minWidth="100.0" prefWidth="75.0" text="        Código" fx:id="codigoColumn" />
+        <TableColumn prefWidth="313.0" text="                                       Descrição" fx:id="descricaoColumn" />
+        <TableColumn prefWidth="120.0" text="       Valor Custo" fx:id="valorCustoColumn" />
+        <TableColumn prefWidth="120.0" text="       Valor Venda" fx:id="valorVendaColumn" />
+      </columns>
+    </TableView>
+    <ImageView fitHeight="73.30940628051758" fitWidth="405.7123247317984" layoutX="56.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+        <Image url="@../images/onlinelogomaker-050116-1849.png" />
+      </image>
+    </ImageView>
+  </children>
+  <stylesheets>
+    <URL value="@style.css" />
+  </stylesheets>
+</AnchorPane>

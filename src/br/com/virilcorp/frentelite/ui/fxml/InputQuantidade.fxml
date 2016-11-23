@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-preview-i18n-resource ../../../../../../Messages.properties?>
+
+<AnchorPane id="AnchorPane" minHeight="348.00019999999495" prefHeight="426.00019999999495" prefWidth="498.0" styleClass="container" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="br.com.virilcorp.frentelite.ui.venda.LeituraQuantidadeProdutoController">
+  <children>
+    <Label layoutX="54.0" layoutY="123.0" styleClass="formLabel" text="%label.quantidade" />
+    <TextField fx:id="inputQuantidade" layoutX="54.0" layoutY="148.0" onAction="#handleAdicionar" prefHeight="40.0" prefWidth="376.0" styleClass="formTextField" />
+    <Button layoutX="54.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleAdicionar" prefWidth="99.0" styleClass="btn, btn-success" text="%label.adicionar" />
+    <Button layoutX="331.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleCancelar" prefWidth="99.0" styleClass="btn, btn-warning" text="%label.cancelar" />
+    <Label fx:id="statusBalanca" layoutX="247.0" layoutY="21.0" styleClass="formLabel" text="%msg.balanca_ativa" />
+    <Label layoutX="54.0" layoutY="50.0" styleClass="formLabel" text="%label.produto" />
+    <TextField fx:id="txtProduto" disable="true" layoutX="54.0" layoutY="75.0" opacity="1.0" prefHeight="40.0" prefWidth="376.0" styleClass="formTextField" />
+    <Button fx:id="btnTara" layoutX="193.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleAdicionarTara" prefWidth="99.0" styleClass="btn, btn-info" text="%label.tara" />
+    <TitledPane fx:id="tarasTitledPanel" animated="false" layoutX="54.0" layoutY="278.0" prefHeight="118.0" prefWidth="376.0" styleClass="panel, panel-title" text="%label.taras">
+      <content>
+        <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+          <children>
+            <FlowPane fx:id="tarasPanel" layoutX="0.0" layoutY="0.0" prefHeight="62.0" prefWidth="372.0" />
+          </children>
+        </AnchorPane>
+      </content>
+    </TitledPane>
+  </children>
+  <stylesheets>
+    <URL value="@theme.css" />
+    <URL value="@bootstrapfx.css" />
+  </stylesheets>
+</AnchorPane>
