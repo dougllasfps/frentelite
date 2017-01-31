@@ -9,6 +9,7 @@ package br.com.virilcorp.frentelite;
 import br.com.virilcorp.frentelite.environment.DefaultFrenteLiteInitializer;
 import br.com.virilcorp.frentelite.environment.FrenteLiteInitializer;
 import br.com.virilcorp.frentelite.ui.StageController;
+import com.sun.javafx.application.LauncherImpl;
 import javafx.application.Application;
 import javafx.concurrent.Task;
 import javafx.stage.Stage;
@@ -30,12 +31,12 @@ public class Main extends Application {
         Task<Void> task = new Task<Void>() {
 			@Override
 			protected Void call() throws Exception {
-				try {
-					initializer.inicializaImpressora();
-				} catch (Exception e) {
-					e.printStackTrace();
-					Main.IMPRESSORA_OFFLINE = true;
-				}
+//				try {
+//					initializer.inicializaImpressora();
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//					Main.IMPRESSORA_OFFLINE = true;
+//				}
 				
 				return null ;
 			}
@@ -49,11 +50,11 @@ public class Main extends Application {
 		Task<Void> task2 = new Task<Void>() {
 			@Override
 			protected Void call() throws Exception {
-				try {
-					initializer.inicializaBalanca();
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
+//				try {
+//					initializer.inicializaBalanca();
+//				} catch (Exception e) {
+//					e.printStackTrace();
+//				}
 
 				return null;
 			}
